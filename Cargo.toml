@@ -15,17 +15,13 @@ categories = ["asynchronous", "hardware-support"]
 appveyor = { repository = "berkowski/tokio-serial", service = "github" }
 travis-ci = { repository = "berkowski/tokio-serial", service = "github" }
 
-[features]
-default = ["libudev"]
-libudev = ["mio-serial/libudev"]
-
 [dependencies]
 futures = "0.1"
 tokio-io = "0.1"
 tokio-reactor = "0.1"
 bytes = "0.4"
 mio = "0.6"
-mio-serial = "=3.1"
+mio-serial = { git = "https://github.com/srenauld/mio-serial" }
 
 [dev-dependencies]
 tokio = "0.1"
